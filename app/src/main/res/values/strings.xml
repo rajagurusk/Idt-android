@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IDT Android</string>
+    <string name="this_is_main_activity">This is Main Activity</string>
+</resources>
