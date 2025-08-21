@@ -10,19 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDTAndroid">
 
-        <!-- Only one launcher activity: SplashActivity (as per your setup) -->
+        <!-- SplashActivity as launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Other activities -->
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <!-- Declare LoginActivity only once -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- Other activities can go here -->
+        <!--<activity android:name=".MainActivity" />-->
 
     </application>
 </manifest>
