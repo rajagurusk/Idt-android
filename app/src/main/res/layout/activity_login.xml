@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diamond_bg">
+
+    <!-- Login Box Frame (Golden border) -->
+    <FrameLayout
+        android:id="@+id/loginFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Golden border view -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/golden_border_bg"/>
+
+        <!-- Login Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:background="@android:color/transparent">
+
+            <!-- Top icons Row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btnHeadphone"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_headphone"
+                    android:contentDescription="Headphone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="48dp"
+                    app:tint="#222" />
+
+                <ImageButton
+                    android:id="@+id/btnPower"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_power"
+                    android:contentDescription="Power"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#222" />
+            </RelativeLayout>
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/idt_logo"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Logo" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SYD-MINI LOGIN"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#222"
+                android:layout_marginTop="12dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back! Please enter your details"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="#222"
+                android:layout_marginTop="8dp" />
+
+            <!-- User ID -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UserID:"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"/>
+            <EditText
+                android:id="@+id/editUserId"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/golden_border_bg"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Password -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password:"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/golden_border_bg"
+                android:textColor="#222"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:inputType="textPassword"
+                android:layout_marginTop="2dp"/>
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Log In"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/golden_button_bg"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDT Gemological Laboratories Worldwide"
+            android:textSize="14sp"
+            android:textColor="#222"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   |   "
+            android:textColor="#222"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="www.idtworldwide.com"
+            android:textSize="14sp"
+            android:textColor="#222"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

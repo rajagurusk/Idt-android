@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IDTAndroid">
 
-        <!-- Splash screen activity set as launcher -->
+        <!-- Only one launcher activity: SplashActivity (as per your setup) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -20,11 +20,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Main activity -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+        <!-- Other activities -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
 
     </application>
-
 </manifest>
