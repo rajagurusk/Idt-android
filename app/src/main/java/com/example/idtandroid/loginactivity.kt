@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -17,14 +18,11 @@ class LoginActivity : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         btnLogin.setOnClickListener {
-            val userId = editUserId.text.toString().trim()
-            val password = editPassword.text.toString().trim()
-            if (userId.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                // TODO: Navigate to your next screen here
-            }
+            Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
         }
+
     }
 }
